@@ -7,6 +7,7 @@ import Preloader from "../general/Preloader/Preloader";
 import { compose } from "redux";
 import { authUs } from "../../hot/authUs";
 import { getCountPage, getCountUsersPage, getIsDisabledFollowButton, getIsLoader, getNumberCurrentPage, getTotalCountPage, getUsers } from "../../redux/selectors";
+// import { setAjaxAndWriteUser } from "../../utils/helpers";
 
 class UsersContainer extends React.Component {
     constructor(props){
@@ -26,6 +27,8 @@ class UsersContainer extends React.Component {
                 countPage = {this.props.countPage}
                 numberCurrentPage = {this.props.numberCurrentPage}
                 setAjaxAndWriteUser = {this.setAjaxAndWriteUser}
+                // setAjaxAndWriteUser = {setAjaxAndWriteUser}
+                countUsersPage = {this.props.countUsersPage}
                 users = {this.props.users}
                 isDisabledFollowButton = {this.props.isDisabledFollowButton}
                 thunkAddFollow = {this.props.thunkAddFollow}
@@ -35,8 +38,7 @@ class UsersContainer extends React.Component {
 }
 }
 
-function mapStateToProps(state){
-    return{
+const mapStateToProps = state => ({
         users: getUsers(state),
         numberCurrentPage: getNumberCurrentPage(state),
         countUsersPage: getCountUsersPage(state),
@@ -44,6 +46,6 @@ function mapStateToProps(state){
         countPage: getCountPage(state),
         isLoader: getIsLoader(state),
         isDisabledFollowButton: getIsDisabledFollowButton(state)
-    }
-}
+    });
+
 export default compose(connect(mapStateToProps, {setCurrentPage, thunkAddUsers, thunkAddNextUsers, thunkAddFollow, thunkUnFollow}), authUs)(UsersContainer) 

@@ -1,33 +1,16 @@
 import React from "react";
 import st from "./Users.module.css"
-import OneUser from "./OneUser/OneUser";
+import OneUser from "./ListUsers/OneUser/OneUser";
+import CountPages from "./CountPages/CountPages";
+import ListUsers from "./ListUsers/ListUsers";
 
 export default function Users(props) {
-    let arrUsers = [];
-    for(let i=1; i<=props.countPage; i++){
-        arrUsers.push(i);
-    }
-    return(
+    return (
         <div className={st.users}>
             <h2 className={st.users__title}>Друзья</h2>
-            <div className={st.steps}>
-            {arrUsers.map(el=>(<span 
-            className={props.numberCurrentPage === el?st.steps__current:st.steps__nocurrent} 
-            key={el}
-            onClick={()=> props.setAjaxAndWriteUser(el)}
-            >{el}</span>))}
-            </div>
+            <CountPages countPage={props.countPage} numberCurrentPage={props.numberCurrentPage} setAjaxAndWriteUser={props.setAjaxAndWriteUser}/>
             <div className={st.users__content}>
-                <div className={st.users__content_list}>
-                    {props.users.map(el=>(<OneUser 
-                        key={el.id} 
-                        user={el}
-                        thunkAddFollow = {props.thunkAddFollow}
-                        thunkUnFollow = {props.thunkUnFollow}
-                        addUser={props.addUser}
-                        isDisabledFollowButton = {props.isDisabledFollowButton}
-                    />))}
-                </div>
+                <ListUsers props={props}/>
                 <div className={st.users__show}>
                     <div className={st.users__show_vrap}>
                         <button className={st.users__btn}>Show more</button>
@@ -36,5 +19,5 @@ export default function Users(props) {
             </div>
         </div>
     )
-    
+
 }

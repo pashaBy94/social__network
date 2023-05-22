@@ -23,7 +23,7 @@ export function profilPageReducer(state = initialState, action) {
             if (action.mes !== '') {
                 newState.postsData = [...state.postsData];
                 let post = { post: action.mes, id: state.postsData.length + 1, likescount: 0 };
-                newState.postsData.unshift(post);
+                newState.postsData.push(post);
             }
             break;
         }

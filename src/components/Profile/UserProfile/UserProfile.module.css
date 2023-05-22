@@ -2,14 +2,10 @@
     border-right: 15px solid; 
       border-image: url('../../../../public/klipartz.com.png') 200 stretch stretch;
     display: flex;
-    /* justify-content: space-between; */
     padding-bottom: 40px;
     padding-left: 10px;
   }
   .about__text h2{
     margin-bottom: 20px;
     margin-top: 10px;
-  }
-  .about__save p{
-    line-height: 30px;
   }
