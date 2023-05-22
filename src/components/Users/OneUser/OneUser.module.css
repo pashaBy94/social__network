@@ -1,0 +1,50 @@
+.user__imag{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.users__point_imag{
+    padding: 5px 0;
+}
+.user__followed{
+    font-family: Anime, Arial;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.user__wrap{
+    text-align: center;
+}
+.users__point{
+    display: grid;
+    grid-template-columns: 120px 11fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
+.users__point:last-child{
+    margin-bottom: 0;
+}
+.users__point_body{
+    border: 1px solid blue;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+}
+.user__description{
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    min-width: 500px;
+}
+.user__name{
+
+}
+.user__status{
+    position: absolute;
+    bottom: 0;
+}
+.user__location{
+    position: absolute;
+    right: 15px;
+}

@@ -1,0 +1,5 @@
+.user__bar{
+    width: 120px;
+    position: relative;
+    z-index: 100;
+}

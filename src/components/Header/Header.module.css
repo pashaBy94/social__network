@@ -1,0 +1,6 @@
+.header{
+    margin-top: 5px;
+    grid-area: hh;
+    border: 15px solid red;
+    border-image: url('../../../public/klipartz.com.png') 200 stretch stretch;
+  }

@@ -1,0 +1,7 @@
+.footer{
+    grid-area: ff;
+    background-color: transparent;
+    border: 15px solid;
+    border-image: url('./../../../public/klipartz2.png') 700 stretch stretch;
+    margin-bottom: 5px;
+  }

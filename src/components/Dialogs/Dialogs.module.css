@@ -1,0 +1,22 @@
+.dialogs{
+    padding-left: 5px;
+}
+.dialog__title{
+    display: inline-block;
+    border-bottom: 10px solid; 
+    border-image: url('./../../../public/redframe.png') 300 stretch stretch;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.list__messag{
+    border-bottom: 10px solid; 
+    border-image: url('./../../../public/redframe.png') 300 stretch stretch;
+    padding: 5px 0;
+    padding-bottom: 80px;
+    height: 520px;
+}
+
+.list__messag::-webkit-scrollbar{
+    width: 0;
+}

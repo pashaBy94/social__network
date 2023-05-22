@@ -1,0 +1,23 @@
+.content{
+      border: none;
+      margin-bottom: 5px;
+      position: relative;
+  }
+  .content__title{
+    display: inline-block;
+    margin-left: 10px;
+    border-bottom: 10px solid; 
+    border-image: url('./../../../public/redframe.png') 300 stretch stretch;
+  }
+
+  .about__text h2{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .about__save p{
+    line-height: 30px;
+  }
+
+  h2{
+    margin: 0 0 20px 10px;
+  }

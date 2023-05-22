@@ -1,0 +1,22 @@
+  .textarea{
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    background-color: rgb(255, 255, 243);
+    margin-bottom: 10px;
+    resize: none;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border: 10px solid; 
+    border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
+  }
+  .btn{
+    float: right;
+    font-family: Anime;
+    font-size: 13px;
+    padding: 7px 15px;
+    border: 7px solid; 
+    background-color: aliceblue;
+    border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
+  }

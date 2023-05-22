@@ -1,0 +1,19 @@
+.post__item{
+    display: grid;
+    max-width: 750px;
+    grid-template-columns: 60px 10fr;
+    border: 7px solid; 
+    padding: 10px;
+    border-image: url('./../../../../../../public/redframe.png') 300 stretch stretch;
+
+  }
+  .post__tilda{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 5px solid green;
+    
+  }
+  .post__item_text{
+    display: inline-block;
+  }

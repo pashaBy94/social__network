@@ -1,0 +1,14 @@
+.dialog__items{
+  width: 200px;
+  height: 500px;
+  float: left;
+  border-right: 10px solid;
+  padding: 5px;
+  padding-right: 10px;
+  border-image: url('./../../../../public/redframe.png') 300 stretch stretch;
+  overflow: auto;
+}
+
+.dialog__items::-webkit-scrollbar{
+  width: 0;
+}

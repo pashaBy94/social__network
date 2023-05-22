@@ -1,0 +1,20 @@
+import { createSelector } from "reselect";
+
+export const getCurrentProfile = state => state.profilePage.currentProfile;
+export const getSuperCurrentProfile = createSelector(getCurrentProfile, ce=>ce);
+export const getCurrentStatus = state => state.profilePage.currentStatus;
+export const getAuthenticationId = state => state.authUser.authentication.id;
+export const getMessag = state => state.dialogsPage.messag;
+export const getDialodsPageData = state => state.dialogsPage.data;
+export const getAuthenticationUser = state => state.authUser.authentication;
+export const getIsAuth = state => state.authUser.isAuth;
+export const getProfile = state => state.authUser.profile;
+export const getPostsData = state => state.profilePage.postsData;
+export const getUsers = state => state.usersPage.users;
+export const getNumberCurrentPage = state => state.usersPage.numberCurrentPage;
+export const getCountUsersPage = state => state.usersPage.countUsersPage;
+export const getTotalCountPage = state => state.usersPage.totalCountPage;
+export const getCountPage = state => state.usersPage.countPage;
+export const getIsLoader = state => state.usersPage.isLoader;
+export const getIsDisabledFollowButton = state => state.usersPage.isDisabledFollowButton;
+export const getTopFriends = state => state.app.topFriends;

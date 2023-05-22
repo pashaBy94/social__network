@@ -1,0 +1,49 @@
+.users{
+    padding: 0 5px;
+}
+.users__title{
+    display: inline-block;
+    border-bottom: 10px solid;
+    border-image: url('./../../../public/redframe.png') 300 stretch stretch;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.users__content_list{
+    margin-bottom: 25px;
+}
+.users__show{
+    width: 100%;
+}
+.users__btn{
+    font-family: Anime, Arial;
+    display: block;
+    padding: 20px 30px;
+    line-height: 15px;
+    font-size: 20px;
+    border: none;
+    width: 250px;
+    border-radius: 10px;
+    background-color: chocolate;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.steps{
+    font-size: 20px;
+    font-family: Anime, Arial;
+    letter-spacing: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+}
+.steps span{
+    cursor: pointer;
+    padding: 10px;
+
+}
+.steps__current{
+    font-weight: bold;
+    border: 1px solid gray;
+}
