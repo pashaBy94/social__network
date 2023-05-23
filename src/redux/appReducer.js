@@ -16,7 +16,6 @@ export function appReducer(state = initialState, action) {
             break;
         }
         case SET_TOP_FRIENDS: {
-            debugger
             newState.topFriends = action.list;
             break;
         }
