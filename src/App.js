@@ -20,8 +20,7 @@ import Preloader from './components/general/Preloader/Preloader';
 import FriendsContainer from './components/Friends/FriendsContainer';
 const Settings = React.lazy(() => import('./components/Settings/Settings'));
 
-class App extends React.Component {
-  
+class App extends React.Component{
   componentDidMount(){
     this.props.setInitiallizedThank();
   }
@@ -47,9 +46,10 @@ class App extends React.Component {
               } />
             </Routes>
           </div>
-          <Routes>
+          <FriendsContainer />
+          {/* <Routes>
             <Route path='*' element={<FriendsContainer />} />
-          </Routes>
+          </Routes> */}
           <Footer />
         </div>
       </BrowserRouter>

@@ -1,7 +1,8 @@
 import React from "react";
+import { memo } from "react";
 import st from './UserBarAva.module.css'
 
-export default function UserBarAva({profile, toggleBar}){
+export default memo(function UserBarAva({profile, toggleBar}){
   const photo = (prof)=>prof?.photos?.small?prof.photos.small:'noava.png';
         return(
             <div className={st.user__bar__head}>
@@ -12,4 +13,4 @@ export default function UserBarAva({profile, toggleBar}){
                 />
             </div>
         )
-    }
+    })

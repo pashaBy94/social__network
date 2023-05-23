@@ -2,7 +2,7 @@ import React from "react";
 import st from './Post.module.css';
 
 export default function Post(props){
-    console.log(props);
+    
     function deletePost(e){
         e.preventDefault();
         props.postsDelete(props.id)

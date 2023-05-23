@@ -1,5 +1,4 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { thunkAddNextUsers } from "../redux/thankCreator";
 
 export const followUnfollowHelper = (users, id, desc) => {
   let el = users.find(us => us.id === id);

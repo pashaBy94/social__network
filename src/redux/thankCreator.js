@@ -71,13 +71,13 @@ export const setCurrentStatusThunk = (status) => {
         })
     }
 }
-export const thunkAddUsers = (countUsersPage, totalCountPage, numberCurrentPage) => {
+export const thunkAddUsers = (countUsersPage, totalCountPage, numberCurrentPage, isLoad) => {
     return (dispatch) => {
-        dispatch(toggleIsLoader(true));
+        if(!isLoad) dispatch(toggleIsLoader(true))
         userAPI.setUsersPageNumber(countUsersPage, numberCurrentPage).then(res => {
             dispatch(setUser(res.data.items));
             dispatch(setTotalCountPage(res.data.totalCount));
-            dispatch(setCountPage(res.data.totalCount, countUsersPage)) // баг должен быть totalCountPage
+            dispatch(setCountPage(res.data.totalCount, countUsersPage)); 
         }).then(res => dispatch(toggleIsLoader(false)));
     }
 }

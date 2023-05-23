@@ -1,0 +1,18 @@
+.user__followed{
+  font-family: Anime, Arial;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.user__imag{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+.users__point_imag{
+  padding: 5px 0;
+}
+.user__wrap{
+  text-align: center;
+}

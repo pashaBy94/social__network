@@ -17,7 +17,6 @@ export function authUserReducer(state = initialState, action) {
     let newState = { ...state };
     switch (action.type) {
         case SET_AUTH_USER: {
-            console.log('authUser');
             newState.authentication.id = action.data.id;
             newState.authentication.email = action.data.email;
             newState.authentication.login = action.data.login;
@@ -25,7 +24,6 @@ export function authUserReducer(state = initialState, action) {
             break;
         }
         case SET_PROFILE: {
-            console.log('setProfile');
             newState.profile = { ...action.profile };
             break;
         }

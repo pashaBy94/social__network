@@ -1,6 +1,5 @@
 import React from "react";
 import st from "./Users.module.css"
-import OneUser from "./ListUsers/OneUser/OneUser";
 import CountPages from "./CountPages/CountPages";
 import ListUsers from "./ListUsers/ListUsers";
 

@@ -6,7 +6,7 @@ import AboutMy from "./AboutMy/AboutMy";
 export default function UserProfile({ profile, status, setCurrentStatusThunk }) {
   return (
     <section className={st.about}>
-      <img src={profile.photos.large} height='250px' />
+      <img src={profile.photos.large} alt="" height='250px' />
       <div className={st.about__text}>
         <h2>{profile.fullName}</h2>
         <ProfileStatus status={status} setCurrentStatusThunk={setCurrentStatusThunk} />

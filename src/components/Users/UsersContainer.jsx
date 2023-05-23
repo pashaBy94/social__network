@@ -7,15 +7,14 @@ import Preloader from "../general/Preloader/Preloader";
 import { compose } from "redux";
 import { authUs } from "../../hot/authUs";
 import { getCountPage, getCountUsersPage, getIsDisabledFollowButton, getIsLoader, getNumberCurrentPage, getTotalCountPage, getUsers } from "../../redux/selectors";
-// import { setAjaxAndWriteUser } from "../../utils/helpers";
 
-class UsersContainer extends React.Component {
+class UsersContainer extends React.Component{
     constructor(props){
         super(props);
         this.setAjaxAndWriteUser = this.setAjaxAndWriteUser.bind(this);
     }
     componentDidMount(){
-        this.props.thunkAddUsers(this.props.countUsersPage, this.props.totalCountPage, this.props.numberCurrentPage);
+        this.props.thunkAddUsers(this.props.countUsersPage, this.props.totalCountPage, this.props.numberCurrentPage, this.props.isLoader);
     }
     setAjaxAndWriteUser(numPage){
         this.props.thunkAddNextUsers(numPage, this.props.countUsersPage);
@@ -27,7 +26,6 @@ class UsersContainer extends React.Component {
                 countPage = {this.props.countPage}
                 numberCurrentPage = {this.props.numberCurrentPage}
                 setAjaxAndWriteUser = {this.setAjaxAndWriteUser}
-                // setAjaxAndWriteUser = {setAjaxAndWriteUser}
                 countUsersPage = {this.props.countUsersPage}
                 users = {this.props.users}
                 isDisabledFollowButton = {this.props.isDisabledFollowButton}
@@ -48,4 +46,4 @@ const mapStateToProps = state => ({
         isDisabledFollowButton: getIsDisabledFollowButton(state)
     });
 
-export default compose(connect(mapStateToProps, {setCurrentPage, thunkAddUsers, thunkAddNextUsers, thunkAddFollow, thunkUnFollow}), authUs)(UsersContainer) 
+export default compose(connect(mapStateToProps, {setCurrentPage, thunkAddUsers, thunkAddNextUsers, thunkAddFollow, thunkUnFollow}), authUs)(UsersContainer)

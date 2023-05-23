@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export function appReducer(state = initialState, action) {
-    let newState = structuredClone(state);
+    let newState = {...state};
     switch (action.type) {
         case SET_INITIALLIZED: {
             newState.initiallized = true;
