@@ -12,12 +12,14 @@ import Footer from './components/Footer/Footer';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import News from './components/News/News';
 import Musics from './components/Musics/Musics';
+import { store } from './redux/redux-store';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import LoginContainer from './components/Login/LoginContainer';
 import Preloader from './components/general/Preloader/Preloader';
 import FriendsContainer from './components/Friends/FriendsContainer';
+import { Provider } from 'react-redux';
 const Settings = React.lazy(() => import('./components/Settings/Settings'));
 
 class App extends React.Component{
@@ -59,6 +61,14 @@ class App extends React.Component{
 
 const mapStateToProp = state => ({initiallized: state.app.initiallized});
 
-export default compose(
+const AppContainer = compose(
   connect(mapStateToProp, { authUserThank, setInitiallizedThank})
-)(App)
+)(App);
+
+export default function AppFull(){
+  return(
+     <Provider store={store}>
+      <AppContainer />
+    </Provider>
+  )
+}
