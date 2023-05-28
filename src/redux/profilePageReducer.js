@@ -37,6 +37,7 @@ export function profilPageReducer(state = initialState, action) {
         }
         case SET_CURRENT_STATUS: {
             newState.currentStatus = action.status?action.status:'';
+            console.log(action.status);
             break;
         }
         default: {}

@@ -15,10 +15,6 @@ class ProfileContainer extends React.Component{
         this.props.setCurrentProfileThunk(usId);
         this.props.getCurrentStatusThunk(usId);
 }
-shouldComponentUpdate(nextProp){
-    if(nextProp?.currentProfile?.fullName === this.props?.currentProfile?.fullName) return false
-    return true
-}
     render(){
         if(!this.props.currentProfile) return <Preloader />
         return(<Profile profile={this.props.currentProfile} status={this.props.currentStatus} setCurrentStatusThunk={this.props.setCurrentStatusThunk}/>)
