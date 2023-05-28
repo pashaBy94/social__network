@@ -10,7 +10,8 @@ import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import News from './components/News/News';
 import { store } from './redux/redux-store';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import Preloader from './components/general/Preloader/Preloader';
 import FriendsContainer from './components/Friends/FriendsContainer';
@@ -28,7 +29,7 @@ class App extends React.Component {
   render() {
     if (!this.props.initiallized) return <Preloader />
     return (<>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className='app-wrapper'>
           <HeaderContainer />
           <NavBar />
