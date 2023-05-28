@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/social__network/static/css/main.195d397f.css",
+    "main.js": "/social__network/static/js/main.562fdf4a.js",
+    "static/js/357.98dd505c.chunk.js": "/social__network/static/js/357.98dd505c.chunk.js",
+    "static/css/999.bb11683c.chunk.css": "/social__network/static/css/999.bb11683c.chunk.css",
+    "static/js/999.5cff853a.chunk.js": "/social__network/static/js/999.5cff853a.chunk.js",
+    "static/js/494.9b5a66ae.chunk.js": "/social__network/static/js/494.9b5a66ae.chunk.js",
+    "static/css/669.f62e6fe7.chunk.css": "/social__network/static/css/669.f62e6fe7.chunk.css",
+    "static/js/669.2cbb4312.chunk.js": "/social__network/static/js/669.2cbb4312.chunk.js",
+    "static/css/59.82b4fb96.chunk.css": "/social__network/static/css/59.82b4fb96.chunk.css",
+    "static/js/59.fbb1d300.chunk.js": "/social__network/static/js/59.fbb1d300.chunk.js",
+    "static/media/klipartz2.png": "/social__network/static/media/klipartz2.3ba8ce83b328e8d2e1bd.png",
+    "static/media/klipartz.com.png": "/social__network/static/media/klipartz.com.291f64927219fbb205b9.png",
+    "static/media/Anime Ace.ttf": "/social__network/static/media/Anime Ace.008593b832ca549161f6.ttf",
+    "static/media/redframe.png": "/social__network/static/media/redframe.2020be091a1b3f5e9f92.png",
+    "index.html": "/social__network/index.html",
+    "main.195d397f.css.map": "/social__network/static/css/main.195d397f.css.map",
+    "main.562fdf4a.js.map": "/social__network/static/js/main.562fdf4a.js.map",
+    "357.98dd505c.chunk.js.map": "/social__network/static/js/357.98dd505c.chunk.js.map",
+    "999.bb11683c.chunk.css.map": "/social__network/static/css/999.bb11683c.chunk.css.map",
+    "999.5cff853a.chunk.js.map": "/social__network/static/js/999.5cff853a.chunk.js.map",
+    "494.9b5a66ae.chunk.js.map": "/social__network/static/js/494.9b5a66ae.chunk.js.map",
+    "669.f62e6fe7.chunk.css.map": "/social__network/static/css/669.f62e6fe7.chunk.css.map",
+    "669.2cbb4312.chunk.js.map": "/social__network/static/js/669.2cbb4312.chunk.js.map",
+    "59.82b4fb96.chunk.css.map": "/social__network/static/css/59.82b4fb96.chunk.css.map",
+    "59.fbb1d300.chunk.js.map": "/social__network/static/js/59.fbb1d300.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.195d397f.css",
+    "static/js/main.562fdf4a.js"
+  ]
+}

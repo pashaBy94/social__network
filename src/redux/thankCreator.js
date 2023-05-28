@@ -2,7 +2,7 @@ import { setInitiallized } from "./appReducer";
 import { setAuthUser, setProfile } from "./authUserReducer";
 import { setCurrentProfile, setCurrentStatus } from "./profilePageReducer";
 import { userAPI } from "../dal/api";
-import { toggleIsLoader, setUser, setTotalCountPage, setCountPage, setCurrentPage, follow, unfollow, toggleDisabledFollow } from "./usersPageReducer";
+import { toggleIsLoader, setUser, setTotalCountPage, follow, unfollow, toggleDisabledFollow, setLengthCountPage } from "./usersPageReducer";
 
 export const setInitiallizedThank = () => {
     return (dispatch) => {
@@ -77,7 +77,7 @@ export const thunkAddUsers = (countUsersPage, totalCountPage, numberCurrentPage,
         userAPI.setUsersPageNumber(countUsersPage, numberCurrentPage).then(res => {
             dispatch(setUser(res.data.items));
             dispatch(setTotalCountPage(res.data.totalCount));
-            dispatch(setCountPage(res.data.totalCount, countUsersPage)); 
+            dispatch(setLengthCountPage(res.data.totalCount));
         }).then(res => dispatch(toggleIsLoader(false)));
     }
 }
@@ -87,7 +87,6 @@ export const thunkAddNextUsers = (numPage, countUsersPage) => {
         userAPI.setUsersPageNumber(countUsersPage, numPage).then(res => {
             dispatch(setUser(res.data.items));
         }).then(res => dispatch(toggleIsLoader(false)));
-        dispatch(setCurrentPage(numPage));
     }
 }
 export const thunkAddFollow = (id) => {

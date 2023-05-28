@@ -1,13 +1,13 @@
 import React from "react";
 import st from "./Users.module.css"
-import CountPages from "./CountPages/CountPages";
+import Paginator from "./Paginator/Paginator";
 import ListUsers from "./ListUsers/ListUsers";
 
 export default function Users(props) {
     return (
         <div className={st.users}>
             <h2 className={st.users__title}>Друзья</h2>
-            <CountPages countPage={props.countPage} numberCurrentPage={props.numberCurrentPage} setAjaxAndWriteUser={props.setAjaxAndWriteUser}/>
+            <Paginator countPage={props.countPage} numberCurrentPage={props.numberCurrentPage} setAjaxAndWriteUser={props.setAjaxAndWriteUser} totalCountPage={props.totalCountPage} lengthCountPage={props.lengthCountPage} setCurrentPage={props.setCurrentPage}/>
             <div className={st.users__content}>
                 <ListUsers props={props}/>
                 <div className={st.users__show}>

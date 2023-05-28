@@ -6,7 +6,7 @@ import { setCurrentPage } from "../../redux/usersPageReducer";
 import Preloader from "../general/Preloader/Preloader";
 import { compose } from "redux";
 import { authUs } from "../../hot/authUs";
-import { getCountPage, getCountUsersPage, getIsDisabledFollowButton, getIsLoader, getNumberCurrentPage, getTotalCountPage, getUsers } from "../../redux/selectors";
+import { getCountUsersPage, getIsDisabledFollowButton, getIsLoader, getLengthCountPage, getNumberCurrentPage, getTotalCountPage, getUsers } from "../../redux/selectors";
 
 class UsersContainer extends React.Component{
     constructor(props){
@@ -23,7 +23,7 @@ class UsersContainer extends React.Component{
         return (
         <>  {this.props.isLoader?<Preloader />:null}
             <Users 
-                countPage = {this.props.countPage}
+                setCurrentPage = {this.props.setCurrentPage}
                 numberCurrentPage = {this.props.numberCurrentPage}
                 setAjaxAndWriteUser = {this.setAjaxAndWriteUser}
                 countUsersPage = {this.props.countUsersPage}
@@ -31,6 +31,8 @@ class UsersContainer extends React.Component{
                 isDisabledFollowButton = {this.props.isDisabledFollowButton}
                 thunkAddFollow = {this.props.thunkAddFollow}
                 thunkUnFollow = {this.props.thunkUnFollow}
+                totalCountPage = {this.props.totalCountPage}
+                lengthCountPage= {this.props.lengthCountPage}
             />
         </>)
 }
@@ -41,9 +43,9 @@ const mapStateToProps = state => ({
         numberCurrentPage: getNumberCurrentPage(state),
         countUsersPage: getCountUsersPage(state),
         totalCountPage: getTotalCountPage(state),
-        countPage: getCountPage(state),
         isLoader: getIsLoader(state),
-        isDisabledFollowButton: getIsDisabledFollowButton(state)
+        isDisabledFollowButton: getIsDisabledFollowButton(state),
+        lengthCountPage: getLengthCountPage(state),
     });
 
 export default compose(connect(mapStateToProps, {setCurrentPage, thunkAddUsers, thunkAddNextUsers, thunkAddFollow, thunkUnFollow}), authUs)(UsersContainer)

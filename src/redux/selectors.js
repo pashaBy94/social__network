@@ -14,7 +14,7 @@ export const getUsers = state => state.usersPage.users;
 export const getNumberCurrentPage = state => state.usersPage.numberCurrentPage;
 export const getCountUsersPage = state => state.usersPage.countUsersPage;
 export const getTotalCountPage = state => state.usersPage.totalCountPage;
-export const getCountPage = state => state.usersPage.countPage;
+export const getLengthCountPage = state => state.usersPage.lengthCountPage;
 export const getIsLoader = state => state.usersPage.isLoader;
 export const getIsDisabledFollowButton = state => state.usersPage.isDisabledFollowButton;
 export const getTopFriends = state => state.app.topFriends;

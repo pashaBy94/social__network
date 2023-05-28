@@ -1,13 +1,13 @@
-import React from "react";
+import React, { memo } from "react";
 import st from './Friends.module.css';
 import { NavLink } from "react-router-dom";
 import ListFriends from "./ListFriends/ListFriends";
 
-export default function Friends({topFriends}){
+export default memo(function Friends({topFriends}){
     return(
         <div className={st.friends}>
             <NavLink to='/users' className={nD=>nD.isActive?st.active: ''}><h3 className={st.friends__title}>Друзья</h3></NavLink>
             <ListFriends topFriends={topFriends}/>
         </div>
     )
-}
+})

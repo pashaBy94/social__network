@@ -1,15 +1,16 @@
-import React from "react";
+import React, { memo } from "react";
 import { getTopFriends } from "../../redux/selectors";
 import Friends from "./Friends";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { withRouter } from "../../utils/helpers";
+// import { useCallback } from "react";
 
-function FriendsContainer({topFriends}){
+const FriendsContainer = memo(function FriendsContainer({topFriends}){
     return(
         <Friends topFriends={topFriends}/>
     )
-}
+})
 
 const mapStateToProps = state => ({
   topFriends: getTopFriends(state)

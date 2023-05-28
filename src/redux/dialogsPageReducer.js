@@ -46,7 +46,7 @@ const initialState = {
 };
 
 export function dialogsPageReducer(state = initialState, action){
-    let newState = structuredClone(state);
+    let newState = {...state};
     switch (action.type) {
                 case ADD_MESSAG:{
                     if(action.mes !== ''){

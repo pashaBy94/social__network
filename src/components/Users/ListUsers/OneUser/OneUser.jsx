@@ -4,11 +4,10 @@ import OneUserPhoto from "./OneUserPhoto/OneUserPhoto";
 import OneUserBody from "./OneUserBody/OneUserBody";
 
 export default function OneUser(props){
-    return (<>
+    return (
         <div className={st.users__point}>
             <OneUserPhoto props={props}/>
             <OneUserBody user={props.user}/>
         </div>
-        </>
     )
 }

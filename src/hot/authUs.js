@@ -10,3 +10,5 @@ export function authUs(Component){
     WrapComponent = connect(mapStateToPropRedirect, {})(WrapComponent)
     return WrapComponent
 }
+
+
