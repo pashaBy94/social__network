@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/social__network/static/css/main.195d397f.css",
-    "main.js": "/social__network/static/js/main.6891e021.js",
+    "main.js": "/social__network/static/js/main.0b359d8a.js",
     "static/js/357.98dd505c.chunk.js": "/social__network/static/js/357.98dd505c.chunk.js",
     "static/css/999.bb11683c.chunk.css": "/social__network/static/css/999.bb11683c.chunk.css",
-    "static/js/999.5cff853a.chunk.js": "/social__network/static/js/999.5cff853a.chunk.js",
+    "static/js/999.14b6fd4e.chunk.js": "/social__network/static/js/999.14b6fd4e.chunk.js",
     "static/js/494.9b5a66ae.chunk.js": "/social__network/static/js/494.9b5a66ae.chunk.js",
     "static/css/669.f62e6fe7.chunk.css": "/social__network/static/css/669.f62e6fe7.chunk.css",
     "static/js/669.2cbb4312.chunk.js": "/social__network/static/js/669.2cbb4312.chunk.js",
@@ -16,10 +16,10 @@
     "static/media/redframe.png": "/social__network/static/media/redframe.2020be091a1b3f5e9f92.png",
     "index.html": "/social__network/index.html",
     "main.195d397f.css.map": "/social__network/static/css/main.195d397f.css.map",
-    "main.6891e021.js.map": "/social__network/static/js/main.6891e021.js.map",
+    "main.0b359d8a.js.map": "/social__network/static/js/main.0b359d8a.js.map",
     "357.98dd505c.chunk.js.map": "/social__network/static/js/357.98dd505c.chunk.js.map",
     "999.bb11683c.chunk.css.map": "/social__network/static/css/999.bb11683c.chunk.css.map",
-    "999.5cff853a.chunk.js.map": "/social__network/static/js/999.5cff853a.chunk.js.map",
+    "999.14b6fd4e.chunk.js.map": "/social__network/static/js/999.14b6fd4e.chunk.js.map",
     "494.9b5a66ae.chunk.js.map": "/social__network/static/js/494.9b5a66ae.chunk.js.map",
     "669.f62e6fe7.chunk.css.map": "/social__network/static/css/669.f62e6fe7.chunk.css.map",
     "669.2cbb4312.chunk.js.map": "/social__network/static/js/669.2cbb4312.chunk.js.map",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.195d397f.css",
-    "static/js/main.6891e021.js"
+    "static/js/main.0b359d8a.js"
   ]
 }
