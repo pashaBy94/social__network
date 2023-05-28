@@ -16,7 +16,6 @@ const initialState = {
     countUsersPage: 10,
     totalCountPage: 0,
     lengthCountPage: [],
-    countPage: 0,
     isLoader: true,
     isDisabledFollowButton: [],
 };

@@ -4,6 +4,7 @@ import { initId } from "../../../utils/helpers";
 
 export default function Paginator(props) {
     const [count, setCount] = useState(1);
+    console.log(props);
     const getNumberCountPages = (numberCurrentPage, callBack, clName, lengthCountPage) => {
         if (lengthCountPage.length > 0) {
             const arr = lengthCountPage[count]
