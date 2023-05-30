@@ -1,7 +1,5 @@
-import { createSelector } from "reselect";
-
-export const getCurrentProfile = state => state.profilePage.currentProfile;
-export const getSuperCurrentProfile = createSelector(getCurrentProfile, ce=>ce);
+export const getSuperCurrentProfile = state => state.profilePage.currentProfile;
+export const getSuperMyProfile = state => state.profilePage.myProfile;
 export const getCurrentStatus = state => state.profilePage.currentStatus;
 export const getAuthenticationId = state => state.authUser.authentication.id;
 export const getMessag = state => state.dialogsPage.messag;
@@ -18,3 +16,4 @@ export const getLengthCountPage = state => state.usersPage.lengthCountPage;
 export const getIsLoader = state => state.usersPage.isLoader;
 export const getIsDisabledFollowButton = state => state.usersPage.isDisabledFollowButton;
 export const getTopFriends = state => state.app.topFriends;
+export const getIsMyPages = state => state.profilePage.isMyPages;

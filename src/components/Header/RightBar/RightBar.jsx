@@ -9,7 +9,7 @@ export default function RightBar({props}){
   const bar = props.isAuth?(<UserBar 
   toggleBar={toggleBar} 
   stateBar={stateBar} 
-  profile={props.profile}
+  myProfile={props.myProfile}
   logoutThank={props.logoutThank}
   />):(<NavLink to='/login'>Login</NavLink>);
     return(

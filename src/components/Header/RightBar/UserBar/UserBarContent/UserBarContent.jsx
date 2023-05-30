@@ -6,7 +6,7 @@ export default function UserBarContent({props}){
   if(!props.stateBar) return null
         return(
               <div className={st.user__bar__menu}>
-                <p className={st.user__title}>{props.profile.fullName}</p>
+                <p className={st.user__title}>{props.myProfile.fullName}</p>
                 <UserBarList logoutThank={props.logoutThank} toggleBar={props.toggleBar}/>
               </div>
               )  

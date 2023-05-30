@@ -1,6 +1,6 @@
 import { setInitiallized } from "./appReducer";
 import { setAuthUser, setProfile } from "./authUserReducer";
-import { setCurrentProfile, setCurrentStatus } from "./profilePageReducer";
+import { savePhoto, setCurrentProfile, setCurrentStatus, updateAboutMyInfo } from "./profilePageReducer";
 import { userAPI } from "../dal/api";
 import { toggleIsLoader, setUser, setTotalCountPage, follow, unfollow, toggleDisabledFollow, setLengthCountPage } from "./usersPageReducer";
 
@@ -49,10 +49,11 @@ export const logoutThank = () => {
     }
 }
 
-export const setCurrentProfileThunk = (usId) => {
+export const setCurrentProfileThunk = (usId, callback=(a)=>({type: null})) => {
     return (dispatch) => {
         userAPI.setPageProfile(usId).then(res => {
             dispatch(setCurrentProfile(res));
+            dispatch(callback(res));
         })
     }
 }
@@ -107,5 +108,25 @@ export const thunkUnFollow = (id) => {
                 dispatch(unfollow(id));
             }
         }).then(r => { dispatch(toggleDisabledFollow(id, false)) })
+    }
+}
+export const savePhotoThunk = (photo) =>{
+    return (dispatch) =>{
+        userAPI.updatePhoto(photo).then(res=>{
+            if(res.data.resultCode === 0){
+                dispatch(savePhoto(res.data.data.photos));
+            }
+        })
+    }
+}
+export const updateInfoProfileThunk = (info) =>{
+    return (dispatch) =>{
+        console.log('start');
+        userAPI.updateInfoProfile(info).then(res=>{
+            console.log(res);
+            if(res.data.resultCode === 0){
+                dispatch(updateAboutMyInfo(info));
+            }
+        })
     }
 }

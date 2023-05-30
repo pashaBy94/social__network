@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import st from './ProfileStatus.module.css';
 
-export default function ProfileStatus(props) {
-    console.log(props.status);
+export default function ProfileStatus(props){
     let [isRedactor, setIsRedactor] = useState(false);
     let [status, setStatus] = useState(props.status);
     function openEditor() {
@@ -12,8 +11,7 @@ export default function ProfileStatus(props) {
         setIsRedactor(false)
         props.setCurrentStatusThunk(status);
     }
-    function changeStatus(ev) {
-        console.log(123123);
+    function changeStatus(ev){
         setStatus(ev.currentTarget.value);
     }
     useEffect(() => {

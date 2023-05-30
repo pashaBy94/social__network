@@ -1,16 +1,16 @@
 import React from "react";
-import { memo } from "react";
-import st from './UserBarAva.module.css'
+import Preloader from "../../../../general/Preloader/Preloader";
+import st from './UserBarAva.module.css';
 
-export default memo(function UserBarAva({profile, toggleBar}){
-  const photo = (prof)=>prof?.photos?.small?prof.photos.small:'noava.png';
+export default function UserBarAva({toggleBar, myProfile}){
+    if(!myProfile) return <Preloader />
         return(
             <div className={st.user__bar__head}>
                 <img alt=''
-                src={photo(profile)} 
+                src={myProfile.photos.small || 'noava.png'} 
                 className={st.user__imag}
                 onClick={()=>toggleBar(pr=>!pr)}
                 />
             </div>
         )
-    })
+    }

@@ -2,23 +2,25 @@ import React from "react";
 import Header from "./Header";
 import { connect } from "react-redux";
 import { authUserThank, logoutThank } from "../../redux/thankCreator";
-import { setAuthUser, setProfile } from "../../redux/authUserReducer";
-import { getAuthenticationUser, getIsAuth, getProfile } from "../../redux/selectors";
+import { setAuthUser } from "../../redux/authUserReducer";
+import { getAuthenticationUser, getCurrentStatus, getIsAuth, getSuperMyProfile } from "../../redux/selectors";
+import { withRouter } from "../../utils/helpers";
 
 class HeaderContainer extends React.Component{
-    render(){
-        const props = this.props;
+    render() {
         return(<Header 
-            user={props.authenticationObj} 
-            isAuth={props.isAuth} 
-            profile={props.profile}
-            logoutThank={props.logoutThank}/>)
+            user={this.props.authenticationObj} 
+            isAuth={this.props.isAuth} 
+            myProfile={this.props.myProfile}
+            logoutThank={this.props.logoutThank}
+            currentStatus={this.props.currentStatus}/>)
     }
 }
 const mapStateToProp = state => ({
         authenticationObj: getAuthenticationUser(state),
         isAuth: getIsAuth(state),
-        profile: getProfile(state),
+        myProfile: getSuperMyProfile(state),
+        currentStatus: getCurrentStatus(state),
     });
 
-export default connect(mapStateToProp, {setAuthUser, setProfile, authUserThank, logoutThank})(HeaderContainer)
+export default withRouter(connect(mapStateToProp, {setAuthUser, authUserThank, logoutThank})(HeaderContainer))

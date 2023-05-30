@@ -4,7 +4,6 @@ import Friends from "./Friends";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { withRouter } from "../../utils/helpers";
-// import { useCallback } from "react";
 
 const FriendsContainer = memo(function FriendsContainer({topFriends}){
     return(

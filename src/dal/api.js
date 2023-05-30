@@ -8,6 +8,23 @@ class APIUS{
             baseURL: `https://social-network.samuraijs.com/api/1.0/`,
         });
     };
+    updatePhoto(photo){
+        let formData = new FormData();
+        formData.append('image', photo);
+        return this.instance.put(`profile/photo`, formData, {
+            headers:{
+                "Content-Type": "multipart/form-data",
+            },
+        })
+    };
+    updateInfoProfile(info){
+        let json = JSON.stringify(info);
+        return this.instance.put(`profile/`, json, {
+            headers:{
+                "Content-Type": "application/json",
+            },
+        })
+    }
     setAuthentication(){
             return this.instance.get(`auth/me`).then(res=>res.data)
     };
