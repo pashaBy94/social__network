@@ -11,7 +11,6 @@
   border: 10px solid; 
   overflow-x: auto;
   overflow-y: hidden;
-  border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
 }
 .btn{
   float: right;
@@ -20,7 +19,6 @@
   padding: 7px 15px;
   border: 7px solid; 
   background-color: aliceblue;
-  border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
 }
 .posts{
   padding-bottom: 30px;

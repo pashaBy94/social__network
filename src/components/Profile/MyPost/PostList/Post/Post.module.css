@@ -4,7 +4,6 @@
     grid-template-columns: 60px 10fr;
     border: 7px solid; 
     padding: 10px;
-    border-image: url('./../../../../../../public/redframe.png') 300 stretch stretch;
 
   }
   .post__tilda{

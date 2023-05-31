@@ -47,3 +47,11 @@ export const getNumberCountPages = (countPage, numberCurrentPage, callBack, clNa
   }
   return arrUsers;
 }
+
+export function parseStatus(status) {
+  if (!status) return
+  const errors = status.errors;
+  const regExp = /(?<=Contacts->)[\w]+/ig;
+  let res = errors.match(regExp)[0].toLowerCase();
+  return res
+}

@@ -1,6 +1,5 @@
 .about{
     border-right: 15px solid; 
-      border-image: url('../../../../public/noava.png') 200 stretch stretch;
     display: flex;
     padding-bottom: 40px;
     padding-left: 10px;
@@ -11,7 +10,6 @@
   }
  
   .user__imag{
-    background-image: url('../../../../public/noava.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

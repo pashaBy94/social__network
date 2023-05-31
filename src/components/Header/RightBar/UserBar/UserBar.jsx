@@ -5,7 +5,7 @@ import UserBarContent from "./UserBarContent/UserBarContent";
 
 export default function UserBar(props){
         return(
-        <div className={st.user__bar}>
+        <div className={st.header__right__bar}>
             <UserBarAva toggleBar={props.toggleBar} myProfile={props.myProfile}/>
             <UserBarContent props={props}/>
         </div>

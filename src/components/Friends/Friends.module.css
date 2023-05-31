@@ -1,7 +1,6 @@
 .friends{
     grid-area: fr;
     border: 15px solid;
-    border-image: url('../../../public/klipartz2.png') 700 stretch stretch;
     padding: 5px;
     height: 200px;
 }

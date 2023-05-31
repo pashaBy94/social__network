@@ -7,7 +7,6 @@
     display: inline-block;
     margin-left: 10px;
     border-bottom: 10px solid; 
-    border-image: url('./../../../public/redframe.png') 300 stretch stretch;
   }
 
   .about__text h2{

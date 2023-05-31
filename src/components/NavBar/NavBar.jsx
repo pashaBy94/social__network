@@ -11,6 +11,12 @@ export default class NavBar extends React.Component{
                     <li><NavLink to='/users' className={nD=>nD.isActive?st.active: ''}>Друзья</NavLink></li>
                     <li><NavLink to='/news' className={nD=>nD.isActive?st.active: ''}>Новости</NavLink></li>
                     <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Музыка</NavLink></li>
+                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Фотографии</NavLink></li>
+                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Видко</NavLink></li>
+                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Игры</NavLink></li>
+                    <li><hr /></li>
+                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Webmoney</NavLink></li>
+                    <li><hr /></li>
                     <li><NavLink to="/settings" className={nD=>nD.isActive?st.active: ''}>Настройки</NavLink></li>
                 </ul>
             </nav>

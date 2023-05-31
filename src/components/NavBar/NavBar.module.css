@@ -1,17 +1,22 @@
-.nav{
-    grid-area: nn;
-    border: 15px solid;
-    border-image: url('../../../public/klipartz2.png') 700 stretch stretch;
-    margin-bottom: 5px;
-    padding-top: 20px;
-  }
-  .nav li{
-    border-bottom: 2px solid black;
-    margin-bottom: 12px;
-  }
-  .nav li a.active{
-    color: #E25753;
-  }
-  .nav li:has(a.active){
-    border-bottom: 2px dotted #E25753;
-  }
+.nav {
+  grid-area: nn;
+}
+
+.nav li {
+  margin-bottom: 12px;
+}
+
+.nav li a.active {
+  color: #E25753;
+}
+
+.nav li:has(a.active) {
+  border-bottom: 2px dotted #E25753;
+}
+hr {
+  background-color: #d6d9dd;
+  border: none;
+  height: 1px;
+  width: 150px;
+  margin: 0 auto;
+}

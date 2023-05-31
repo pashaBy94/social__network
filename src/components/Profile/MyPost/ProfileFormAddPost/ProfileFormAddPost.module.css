@@ -9,7 +9,6 @@
     border: none;
     outline: none;
     border: 10px solid; 
-    border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
   }
   .btn{
     float: right;
@@ -18,5 +17,4 @@
     padding: 7px 15px;
     border: 7px solid; 
     background-color: aliceblue;
-    border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
   }

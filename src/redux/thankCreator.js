@@ -1,5 +1,5 @@
 import { setInitiallized } from "./appReducer";
-import { setAuthUser, setProfile } from "./authUserReducer";
+import { getCaptchaFromStore, setAuthUser, setProfile } from "./authUserReducer";
 import { savePhoto, setCurrentProfile, setCurrentStatus, updateAboutMyInfo } from "./profilePageReducer";
 import { userAPI } from "../dal/api";
 import { toggleIsLoader, setUser, setTotalCountPage, follow, unfollow, toggleDisabledFollow, setLengthCountPage } from "./usersPageReducer";
@@ -25,13 +25,26 @@ export function authUserThank() {
         }));
     }
 }
+export const getCaptchaThank = ()=>{
+    return (dispatch)=>{
+    userAPI.getCaptcha().then(res=>{
+        if(res.status === 200)
+        dispatch(getCaptchaFromStore(res.data.url));
+    })
+}
+}
 
-export const loginThank = (email, password, rememberMe, submitProps) => {
+export const loginThank = (email, password, rememberMe, captcha, submitProps, setNoFail) => {
     return (dispatch) => {
-        userAPI.login(email, password, rememberMe).then(res => {
+        userAPI.login(email, password, rememberMe, captcha).then(res => {
             if (res.data.resultCode === 0) {
                 dispatch(authUserThank());
+                dispatch(getCaptchaFromStore(null));
+            } else if (res.data.resultCode === 10) {
+                dispatch(getCaptchaThank());
+                setNoFail(true);
             } else {
+                setNoFail(true);
                 submitProps({ errors: res.data.messages })
             }
         })
@@ -49,7 +62,7 @@ export const logoutThank = () => {
     }
 }
 
-export const setCurrentProfileThunk = (usId, callback=(a)=>({type: null})) => {
+export const setCurrentProfileThunk = (usId, callback = (a) => ({ type: null })) => {
     return (dispatch) => {
         userAPI.setPageProfile(usId).then(res => {
             dispatch(setCurrentProfile(res));
@@ -74,7 +87,7 @@ export const setCurrentStatusThunk = (status) => {
 }
 export const thunkAddUsers = (countUsersPage, totalCountPage, numberCurrentPage, isLoad) => {
     return (dispatch) => {
-        if(!isLoad) dispatch(toggleIsLoader(true))
+        if (!isLoad) dispatch(toggleIsLoader(true))
         userAPI.setUsersPageNumber(countUsersPage, numberCurrentPage).then(res => {
             dispatch(setUser(res.data.items));
             dispatch(setTotalCountPage(res.data.totalCount));
@@ -110,22 +123,22 @@ export const thunkUnFollow = (id) => {
         }).then(r => { dispatch(toggleDisabledFollow(id, false)) })
     }
 }
-export const savePhotoThunk = (photo) =>{
-    return (dispatch) =>{
-        userAPI.updatePhoto(photo).then(res=>{
-            if(res.data.resultCode === 0){
+export const savePhotoThunk = (photo) => {
+    return (dispatch) => {
+        userAPI.updatePhoto(photo).then(res => {
+            if (res.data.resultCode === 0) {
                 dispatch(savePhoto(res.data.data.photos));
             }
         })
     }
 }
-export const updateInfoProfileThunk = (info, submitProps, setModEdit) =>{
-    return (dispatch) =>{
-        userAPI.updateInfoProfile(info).then(res=>{
-            if(res.data.resultCode === 0){
+export const updateInfoProfileThunk = (info, submitProps, setModEdit) => {
+    return (dispatch) => {
+        userAPI.updateInfoProfile(info).then(res => {
+            if (res.data.resultCode === 0) {
                 dispatch(updateAboutMyInfo(info));
                 setModEdit(false);
-            } else{
+            } else {
                 submitProps({ errors: res.data.messages[0] })
             }
         })

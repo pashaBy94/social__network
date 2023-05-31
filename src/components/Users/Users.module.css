@@ -4,7 +4,6 @@
 .users__title{
     display: inline-block;
     border-bottom: 10px solid;
-    border-image: url('./../../../public/redframe.png') 300 stretch stretch;
     margin: 0;
     padding: 0;
     margin-bottom: 20px;

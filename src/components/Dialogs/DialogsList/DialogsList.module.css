@@ -5,7 +5,6 @@
   border-right: 10px solid;
   padding: 5px;
   padding-right: 10px;
-  border-image: url('./../../../../public/redframe.png') 300 stretch stretch;
   overflow: auto;
 }
 

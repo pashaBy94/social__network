@@ -5,6 +5,13 @@ import st from './RightBar.module.css'
 import UserBar from "./UserBar/UserBar";
 
 export default function RightBar({props}){
+
+function openBar(ev){
+  ev.preventDefault();
+  console.log(111);
+  toggleBar(pr=>!pr);
+}
+
   const [stateBar, toggleBar] = useState(false);
   const bar = props.isAuth?(<UserBar 
   toggleBar={toggleBar} 
@@ -14,7 +21,9 @@ export default function RightBar({props}){
   />):(<NavLink to='/login'>Login</NavLink>);
     return(
       <div className={st.header__right}>
+        <div className={st.header__right__title}>{props.myProfile?.fullName}</div>
         {bar}
+        <button className={st.header__right__open} onClick={(e)=>openBar(e)}>&#8744;</button>
       </div>
       )
 }

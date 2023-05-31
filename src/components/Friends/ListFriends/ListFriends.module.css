@@ -6,7 +6,6 @@
   font-size: 10px;
   padding: 5px;
   border: 5px solid; 
-  border-image: url('./../../../../public/redframe.png') 300 stretch stretch;
   text-align: center;
 }
 .friends__img{

@@ -1,7 +1,8 @@
-import { SET_AUTH_USER, SET_PROFILE } from "./types";
+import { SET_AUTH_USER, SET_PROFILE, GET_CAPTCHA } from "./types";
 
 export const setAuthUser = (email, login, id, isAuth) => ({ type: SET_AUTH_USER, data: { email, login, id, isAuth } });
 export const setProfile = (profile) => ({ type: SET_PROFILE, profile });
+export const getCaptchaFromStore = (urls) => ({type: GET_CAPTCHA, urls});
 
 const initialState = {
     authentication: {
@@ -10,7 +11,8 @@ const initialState = {
         id: null,
     },
     isAuth: false,
-    profile: null
+    profile: null,
+    captchaUrl: null,
 };
 
 export function authUserReducer(state = initialState, action) {
@@ -25,6 +27,10 @@ export function authUserReducer(state = initialState, action) {
         }
         case SET_PROFILE: {
             newState.profile = { ...action.profile };
+            break;
+        }
+        case GET_CAPTCHA: {
+            newState.captchaUrl = action.urls;
             break;
         }
         default: {}

@@ -1,5 +1,5 @@
-.user__bar{
-    width: 120px;
-    position: relative;
+.header__right__bar{
+    /* width: 180px; */
+    /* position: relative; */
     z-index: 100;
 }

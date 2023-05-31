@@ -5,12 +5,12 @@ import st from './UserBarAva.module.css';
 export default function UserBarAva({toggleBar, myProfile}){
     if(!myProfile) return <Preloader />
         return(
-            <div className={st.user__bar__head}>
+            <div className={st.header__right__ava}>
                 <img alt=''
                 src={myProfile.photos.small || 'noava.png'} 
-                className={st.user__imag}
+                className={st.header__right__imag}
                 onClick={()=>toggleBar(pr=>!pr)}
                 />
-            </div>
+                </div>
         )
     }

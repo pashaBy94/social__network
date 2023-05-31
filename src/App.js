@@ -29,8 +29,9 @@ class App extends React.Component {
     if (!this.props.initiallized) return <Preloader />
     return (<>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div className='app-wrapper'>
           <HeaderContainer />
+        <div className='app'>
+        <div className='app-wrapper'>
           <NavBar />
           <div className='app__wrapper_content'>
             <Suspense>
@@ -46,8 +47,9 @@ class App extends React.Component {
             </Suspense>
           </div>
           <FriendsContainer />
-          <Footer />
+          </div>
         </div>
+          <Footer />
       </BrowserRouter>
     </>
     )

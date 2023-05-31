@@ -17,3 +17,4 @@ export const getIsLoader = state => state.usersPage.isLoader;
 export const getIsDisabledFollowButton = state => state.usersPage.isDisabledFollowButton;
 export const getTopFriends = state => state.app.topFriends;
 export const getIsMyPages = state => state.profilePage.isMyPages;
+export const getCaptchaUrl = state => state.authUser.captchaUrl;

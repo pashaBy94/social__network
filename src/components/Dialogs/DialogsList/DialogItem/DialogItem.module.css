@@ -2,7 +2,6 @@
     min-height: 50px;
     text-align: center;
     border-bottom: 10px solid;
-    border-image: url('./../../../../../public/redframe.png') 300 stretch stretch;
 }
 a.actives{
     color: #2D90F3;
