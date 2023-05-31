@@ -30,7 +30,7 @@ export const loginThank = (email, password, rememberMe, submitProps) => {
     return (dispatch) => {
         userAPI.login(email, password, rememberMe).then(res => {
             if (res.data.resultCode === 0) {
-                dispatch(authUserThank())
+                dispatch(authUserThank());
             } else {
                 submitProps({ errors: res.data.messages })
             }
@@ -119,13 +119,14 @@ export const savePhotoThunk = (photo) =>{
         })
     }
 }
-export const updateInfoProfileThunk = (info) =>{
+export const updateInfoProfileThunk = (info, submitProps, setModEdit) =>{
     return (dispatch) =>{
-        console.log('start');
         userAPI.updateInfoProfile(info).then(res=>{
-            console.log(res);
             if(res.data.resultCode === 0){
                 dispatch(updateAboutMyInfo(info));
+                setModEdit(false);
+            } else{
+                submitProps({ errors: res.data.messages[0] })
             }
         })
     }
