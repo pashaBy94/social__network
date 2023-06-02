@@ -29,27 +29,28 @@ class App extends React.Component {
     if (!this.props.initiallized) return <Preloader />
     return (<>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <HeaderContainer />
+        <HeaderContainer />
         <div className='app'>
-        <div className='app-wrapper'>
-          <NavBar />
-          <div className='app__wrapper_content'>
-            <Suspense>
-              <Routes>
-                <Route path='/profile/:usId?' element={<ProfileContainer />} />
-                <Route path='/dialogs' element={<DialogsContainer />} />
-                <Route path='/users' element={<UsersContainer />} />
-                <Route path='/news' element={<News />} />
-                <Route path='/musics' element={<Musics />} />
-                <Route path='/login' element={<LoginContainer />} />
-                <Route path='/settings' element={<Settings />} />
-              </Routes>
-            </Suspense>
-          </div>
-          <FriendsContainer />
+          <div className='app-wrapper'>
+            <NavBar />
+            <div className='app__wrapper_content'>
+              <Suspense>
+                <Routes>
+                  <Route path='/profile/:usId?' element={<ProfileContainer />} />
+                  <Route path='/dialogs' element={<DialogsContainer />} />
+                  <Route path='/users' element={<UsersContainer />} />
+                  <Route path='/news' element={<News />} />
+                  <Route path='/musics' element={<Musics />} />
+                  <Route path='/login' element={<LoginContainer />} />
+                  <Route path='/settings' element={<Settings />} />
+                  <Route path='/' element={<ProfileContainer />} />
+                </Routes>
+              </Suspense>
+            </div>
+            <FriendsContainer />
           </div>
         </div>
-          <Footer />
+        <Footer />
       </BrowserRouter>
     </>
     )
