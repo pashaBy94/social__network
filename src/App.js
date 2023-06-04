@@ -9,6 +9,7 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import News from './components/News/News';
+import Error from './components/Error/Error';
 import { store } from './redux/redux-store';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProfileContainer from './components/Profile/ProfileContainer';
@@ -22,7 +23,29 @@ const Musics = React.lazy(() => import('./components/Musics/Musics'));
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const LoginContainer = React.lazy(() => import('./components/Login/LoginContainer'));
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null, errorInfo: null };
+  }
+  componentDidCatch(error, errorInfo) {
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    })
+  }
+  render() {
+    if (this.state.errorInfo) {
+      return <Error state={this.state}/>
+    }
+    return this.props.children;
+  }  
+}
+
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     this.props.setInitiallizedThank();
   }
@@ -56,6 +79,7 @@ class App extends React.Component {
     </>
     )
   }
+
 }
 
 const mapStateToProp = state => ({ initiallized: state.app.initiallized });
@@ -67,7 +91,9 @@ const AppContainer = compose(
 export default function AppFull() {
   return (
     <Provider store={store}>
-      <AppContainer />
+      <ErrorBoundary>
+        <AppContainer />
+      </ErrorBoundary>
     </Provider>
   )
 }
