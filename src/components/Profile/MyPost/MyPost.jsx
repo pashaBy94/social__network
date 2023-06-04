@@ -7,7 +7,7 @@ export default class MyPost extends React.Component {
     render(){
         return (<div>
             <section className={st.posts}>
-                <h2>Мои посты</h2>
+                <h2>Add post</h2>
                 <ProfileFormAddPost postAdd={this.props.postAdd} />
                 <div className={st.wrap}></div>
             </section>

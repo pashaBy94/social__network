@@ -8,7 +8,7 @@ export default memo(function OneFriend({name, imag, id}){
       <li>
         <NavLink to={`/profile/${id}`}>
           <img src={imag} alt='' className={st.friends__img}/>
-          <p>{name}</p>
+          <p className={st.friends__text}>{name}</p>
         </NavLink>
       </li>
     )

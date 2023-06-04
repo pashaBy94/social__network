@@ -1,18 +1,14 @@
 .content{
-      border: none;
-      margin-bottom: 5px;
       position: relative;
+      background-color: #EDEEF0;
+      padding: 15px;
   }
-  .content__title{
-    display: inline-block;
-    margin-left: 10px;
-    border-bottom: 10px solid; 
-  }
-
+ 
   .about__text h2{
     margin-bottom: 20px;
     margin-top: 10px;
   }
+
   .about__save p{
     line-height: 30px;
   }

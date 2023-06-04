@@ -11,6 +11,7 @@ export default function UserProfile({ profile, status, setCurrentStatusThunk, sa
   if(!myProfile) return <Preloader />
   return (
     <section className={st.about}>
+      <div className={st.about__photo}>
       <img 
       src={isMyPages?myProfile.photos.large:profile.photos.large || 'noava.png'} 
       alt="" 
@@ -18,13 +19,15 @@ export default function UserProfile({ profile, status, setCurrentStatusThunk, sa
       width='250px'
       className={st.user__imag}/>
       {isMyPages 
-      && (<form action="">
-            <input type="file" id="download__photo" onChange={getPhoto}/>
+      && (<form action=""><label className={st.user__photo__btn}>Download your photo<input type="file" id="download__photo" className={st.photo__download} onChange={getPhoto}/>
+            </label>
           </form>
       )}
+      </div>
       <div className={st.about__text}>
-        <h2>{profile.fullName}</h2>
+        <h2 className={st.about__fullname}>{profile.fullName}</h2>
         <ProfileStatus status={status} setCurrentStatusThunk={setCurrentStatusThunk} />
+        <hr className={st.about__hr}/>
         <AboutMy profile={{ ...profile }} isMyPages={isMyPages} updateInfoProfileThunk={updateInfoProfileThunk} authenticationId={authenticationId} />
       </div>
     </section>

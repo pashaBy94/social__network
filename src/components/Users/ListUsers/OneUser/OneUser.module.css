@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 120px 11fr;
     grid-gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .users__point:last-child{
     margin-bottom: 0;

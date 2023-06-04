@@ -18,12 +18,12 @@ export default function FormMessagWrite({ messagAdd }) {
   const mesRef = useRef('');
   return (
       <div className={st.posts}>
-          <form onSubmit={formik.handleSubmit}>
+          <form onSubmit={formik.handleSubmit} className={st.write__messag}>
               <textarea
                   name="messag"
                   id="messag"
                   className={st.textarea}
-                  placeholder='your news...'
+                  placeholder='your messag...'
                   onChange={formik.handleChange}
                   value={formik.messag}
                   ref={mesRef}

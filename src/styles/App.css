@@ -21,14 +21,14 @@ h1,h2,h3,h4,h5{
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 300px 1fr 60px;
-    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 350px 10fr;
+    grid-template-columns: 250px 10fr;
+    align-items: start;
     width: 100%;
     grid-gap: 10px;
     grid-template-areas: 
         "nn cc"
-        "fr cc"
-        "ff ff";
+        "fr cc";
 }
 
 html::-webkit-scrollbar {

@@ -9,14 +9,14 @@ export default function ProfileFormAddPost({ postAdd }) {
       initialValues: {
           postText: '',
       },
-      validate: validateMessag(10, 'postText'),
+      validate: validateMessag(300, 'postText'),
       onSubmit(value) {
           postAdd(value.postText);
           postTextarea.current.value = value.postText = '';
       }
   });
   return (
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} className={st.posts__write}>
           <textarea
               placeholder='your news...'
               name="postText"

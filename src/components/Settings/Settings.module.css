@@ -1,0 +1,14 @@
+.settings{
+  padding: 15px;
+}
+.settings__title{
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.settings__body{
+  background-color: white;
+  padding: 15px;
+
+}

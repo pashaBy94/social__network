@@ -8,7 +8,6 @@ export default function RightBar({props}){
 
 function openBar(ev){
   ev.preventDefault();
-  console.log(111);
   toggleBar(pr=>!pr);
 }
 
@@ -23,7 +22,7 @@ function openBar(ev){
       <div className={st.header__right}>
         <div className={st.header__right__title}>{props.myProfile?.fullName}</div>
         {bar}
-        <button className={st.header__right__open} onClick={(e)=>openBar(e)}>&#8744;</button>
+        <button className={st.header__right__open} onClick={(e)=>openBar(e)}><img src="arrow-down-whit.png" className={st.header__btn} /></button>
       </div>
       )
 }

@@ -1,20 +1,41 @@
 .steps {
-    font-size: 20px;
-    font-family: Anime, Arial;
-    letter-spacing: 20px;
-    padding: 10px;
-    padding-bottom: 30px;
-    display: block;
-    width: 400px;
-    margin: 0 auto;
+    font-size: 14px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .steps span {
     cursor: pointer;
-    padding: 10px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #EDEEF0;
 }
 
+.steps__button{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #4A77A8;
+    background-color: #EDEEF0;
+    cursor: pointer;
+}
 .steps__current {
     font-weight: bold;
-    border: 1px solid gray;
+    border: 3px solid #4A77A8;
+}
+.no__active {
+    background-color: #ffffff;
+    color: #acbccd;
 }

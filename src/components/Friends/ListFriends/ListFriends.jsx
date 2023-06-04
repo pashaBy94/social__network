@@ -5,7 +5,7 @@ import { listComponentWriteFriends } from "../../../utils/helpers";
 
 export default memo(function ListFriends({ topFriends }) {
     return (
-        <ul className={st.topFriends}>
+        <ul className={st.top__friends}>
             {listComponentWriteFriends(topFriends, OneFriend)}
         </ul>
     )

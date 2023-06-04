@@ -1,18 +1,16 @@
 .users{
-    padding: 0 5px;
+    padding: 15px;
 }
 .users__title{
-    display: inline-block;
-    border-bottom: 10px solid;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 .users__show{
     width: 100%;
 }
 .users__btn{
-    font-family: Anime, Arial;
     display: block;
     padding: 20px 30px;
     line-height: 15px;

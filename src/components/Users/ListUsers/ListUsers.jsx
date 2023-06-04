@@ -6,6 +6,7 @@ import { listComponentWriteUsers } from "../../../utils/helpers";
 export default function ListUsers({ props }) {
     return (
         <div className={st.users__content_list}>
+            <hr className={st.users__content_line}/>
             {listComponentWriteUsers(props, OneUser)}
         </div>
     )

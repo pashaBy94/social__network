@@ -5,7 +5,7 @@ export const setTopFriends = (list)=>({ type: SET_TOP_FRIENDS, list});
 
 const initialState = {
     initiallized: false,
-    topFriends: [{img:"icon.png",name:'Dima', id:'23566'},{img:"icon.png",name:'Lola', id:'23567'},{img:"icon.png",name:'Miha', id:'23557'}],
+    topFriends: [{img:"noava.png",name:'Dima', id:'23566'},{img:"noava.png",name:'Lola', id:'23567'},{img:"noava.png",name:'Miha', id:'23557'},{img:"noava.png",name:'Miha', id:'23557'},{img:"noava.png",name:'Miha', id:'23557'},{img:"noava.png",name:'Miha', id:'23557'}],
 };
 
 export function appReducer(state = initialState, action) {

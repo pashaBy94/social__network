@@ -9,9 +9,9 @@ export default function Post(props){
     }
     return(
             <div className={st.post__item}>
-                <div className={`${st.post__tilda}`}></div>
+                <div className={`${st.post__tilda}`}><img src="noava.png"/></div>
                 <p className={st.post__item_text}>{props.post}</p>
-                <button onClick={deletePost}>X</button>
+                <button onClick={deletePost} className={st.post__button}>X</button>
             </div>
     )
 }

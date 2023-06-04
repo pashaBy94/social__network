@@ -33,6 +33,7 @@ export default function ProfileStatus(props){
                 </div>
                 : <div className={st.profile__status} onClick={openEditor.bind(this)}>
                     <p>Status: {props.status}</p>
+                    <div className={st.profile__rename}>click to rename</div>
                 </div>}
         </>
     )

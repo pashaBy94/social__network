@@ -6,7 +6,7 @@ import ListFriends from "./ListFriends/ListFriends";
 export default memo(function Friends({topFriends}){
     return(
         <div className={st.friends}>
-            <NavLink to='/users' className={nD=>nD.isActive?st.active: ''}><h3 className={st.friends__title}>Друзья</h3></NavLink>
+            <NavLink to='/users' className={nD=>nD.isActive?st.active: ''}><h3 className={st.friends__title}>Top friends</h3></NavLink>
             <ListFriends topFriends={topFriends}/>
         </div>
     )

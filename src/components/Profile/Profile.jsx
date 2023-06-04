@@ -9,7 +9,7 @@ export default function Profile({ profile, status, setCurrentStatusThunk, savePh
   if (!profile) return <Preloader />
   return (
     <div className={st.content}>
-      <h2 className={st.content__title}>Profile</h2>
+      {/* <h2 className={st.content__title}>Profile</h2> */}
       <UserProfile 
       profile={profile} 
       status={status} 

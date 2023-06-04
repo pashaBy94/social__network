@@ -1,7 +1,7 @@
 .users__point_body{
-  border: 1px solid blue;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 15px;
+  background-color: white;
   position: relative;
 }
 .user__description{

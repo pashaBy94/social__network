@@ -33,7 +33,6 @@ class ProfileContainer extends React.Component {
             } else {
                 this.props.setMyPages(false);
                 this.props.setCurrentProfileThunk(usId);
-
             }
             this.props.getCurrentStatusThunk(usId);
         }

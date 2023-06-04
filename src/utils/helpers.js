@@ -6,7 +6,7 @@ export const followUnfollowHelper = (users, id, desc) => {
 }
 export const listComponentWriteDialog = (list, Elem) => list.map(us => <Elem id={us.id} title={us.name} key={initId()} />);
 
-export const listComponentWriteMessag = (list, Elem) => list.map(el => <Elem messag={el.messag} key={initId()} />);
+export const listComponentWriteMessag = (list, Elem) => list.map(el => <Elem messag={el.messag} itIs={el.itIs} time={el.time} key={initId()} />);
 
 export const listComponentWriteFriends = (list, Elem) => list.map(el => <Elem key={initId()} name={el.name} id={el.id} imag={el.img} />);
 

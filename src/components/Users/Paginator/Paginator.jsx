@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import st from "./Paginator.module.css";
 import { initId } from "../../../utils/helpers";
+import cn from "classnames";
 
 export default function Paginator(props) {
     const [count, setCount] = useState(1);
@@ -34,9 +35,9 @@ export default function Paginator(props) {
     },[])
     return (
         <div className={st.steps}>
-            <button onClick={setPrev} disabled={count===1}>prev</button>
+            <button onClick={setPrev} disabled={count===1} className={cn({[st.no__active]:count===1, [st.steps__button]:true})}>prev</button>
             {getNumberCountPages(props.numberCurrentPage, props.setAjaxAndWriteUser, st, props.lengthCountPage)}
-            <button onClick={setNext} disabled={count===props.lengthCountPage.length}>next</button>
+            <button onClick={setNext} disabled={count===props.lengthCountPage.length} className={cn({[st.no__active]:count===props.lengthCountPage.length, [st.steps__button]:true})}>next</button>
         </div>
     )
 }

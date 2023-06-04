@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import Preloader from './components/general/Preloader/Preloader';
 import FriendsContainer from './components/Friends/FriendsContainer';
+import SettingsContainer from './components/Settings/Settings';
 
 const Settings = React.lazy(() => import('./components/Settings/Settings'));
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'))
@@ -42,7 +43,7 @@ class App extends React.Component {
                   <Route path='/news' element={<News />} />
                   <Route path='/musics' element={<Musics />} />
                   <Route path='/login' element={<LoginContainer />} />
-                  <Route path='/settings' element={<Settings />} />
+                  <Route path='/settings' element={<SettingsContainer />} />
                   <Route path='/' element={<ProfileContainer />} />
                 </Routes>
               </Suspense>

@@ -6,18 +6,18 @@ export default class NavBar extends React.Component{
         return(
             <nav className={st.nav}>
                 <ul>
-                    <li><NavLink to='/profile' className={nD =>nD.isActive?st.active: ''}>Профиль</NavLink></li>
-                    <li><NavLink to='/dialogs' className={nD=>nD.isActive?st.active: ''}>Сообщения</NavLink></li>
-                    <li><NavLink to='/users' className={nD=>nD.isActive?st.active: ''}>Друзья</NavLink></li>
-                    <li><NavLink to='/news' className={nD=>nD.isActive?st.active: ''}>Новости</NavLink></li>
-                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Музыка</NavLink></li>
-                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Фотографии</NavLink></li>
-                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Видко</NavLink></li>
-                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Игры</NavLink></li>
+                    <li><NavLink to='/profile' className={nD =>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="home.png" className={st.nav__imag__item}/></div>Профиль</NavLink></li>
+                    <li><NavLink to='/dialogs' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="message.png" className={st.nav__imag__item}/></div>Сообщения</NavLink></li>
+                    <li><NavLink to='/users' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="friends.png" className={st.nav__imag__item}/></div>Друзья</NavLink></li>
+                    <li><NavLink to='/news' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="news.png" className={st.nav__imag__item}/></div>Новости</NavLink></li>
+                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="music.png" className={st.nav__imag__item}/></div>Музыка</NavLink></li>
+                    <li><NavLink to='/photos' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="photo.png" className={st.nav__imag__item}/></div>Фотографии</NavLink></li>
+                    <li><NavLink to='/videos' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="video-player.png" className={st.nav__imag__item}/></div>Видео</NavLink></li>
+                    <li><NavLink to='/games' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="game.png" className={st.nav__imag__item}/></div>Игры</NavLink></li>
                     <li><hr /></li>
-                    <li><NavLink to='/musics' className={nD=>nD.isActive?st.active: ''}>Webmoney</NavLink></li>
+                    <li><NavLink to='/webmoney' className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="wallet.png" className={st.nav__imag__item}/></div>Webmoney</NavLink></li>
                     <li><hr /></li>
-                    <li><NavLink to="/settings" className={nD=>nD.isActive?st.active: ''}>Настройки</NavLink></li>
+                    <li><NavLink to="/settings" className={nD=>nD.isActive?st.active: ''}><div className={st.nav__imag}><img src="setting.png" className={st.nav__imag__item}/></div>Настройки</NavLink></li>
                 </ul>
             </nav>
         )

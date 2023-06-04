@@ -4,13 +4,18 @@ import { Formik } from "formik";
 import { useState } from "react";
 import { parseStatus } from "../../../../../utils/helpers";
 import { validateUrl } from "../../../../validators/validForm";
-
+import cn from "classnames";
 
 
 export default function AboutForm({ profile, setModEdit, updateInfoProfileThunk, authenticationId }) {
     const [isFail, setNoFail] = useState(false);
     function onClick() {
         setNoFail(false);
+    }
+    function cnForm(val, form){
+        return cn({
+            'error_list': true
+        })
     }
     return (
         <div className={st.about__save}>
@@ -33,7 +38,7 @@ export default function AboutForm({ profile, setModEdit, updateInfoProfileThunk,
                 {(formik) => {
                     if (formik.status) parseStatus(formik.status)
                     return (
-                        <form onSubmit={formik.handleSubmit}>
+                        <form onSubmit={formik.handleSubmit} className={st.about__info}>
                             <p><strong>Full name? </strong>
                                 <input
                                     type='text'
@@ -165,7 +170,7 @@ export default function AboutForm({ profile, setModEdit, updateInfoProfileThunk,
                                         className={((parseStatus(formik.status) === 'youtube') || (formik.errors.youtube && isFail)) ? st.error_list : null}
                                     /></p></li>
                             </ul>
-                            <input type="submit" value='Save' onClick={() => setNoFail(true)} />
+                            <input type="submit" value='Save' onClick={() => setNoFail(true)} className={st.about__info__rename}/>
                             {parseStatus(formik.status) ? <div>not correct is {parseStatus(formik.status)}</div> : null}
                         </form>
                     )

@@ -7,7 +7,13 @@ export default memo(function Users(props) {
     return (
         <div className={st.users}>
             <h2 className={st.users__title}>Друзья</h2>
-            <Paginator numberCurrentPage={props.numberCurrentPage} setAjaxAndWriteUser={props.setAjaxAndWriteUser} totalCountPage={props.totalCountPage} lengthCountPage={props.lengthCountPage} setCurrentPage={props.setCurrentPage}/>
+            <Paginator 
+                numberCurrentPage={props.numberCurrentPage} 
+                setAjaxAndWriteUser={props.setAjaxAndWriteUser} 
+                totalCountPage={props.totalCountPage} 
+                lengthCountPage={props.lengthCountPage} 
+                setCurrentPage={props.setCurrentPage}
+            />
             <div className={st.users__content}>
                 <ListUsers props={props}/>
                 <div className={st.users__show}>
