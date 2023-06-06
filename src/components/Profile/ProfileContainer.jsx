@@ -7,7 +7,8 @@ import { withRouter } from "../../utils/helpers";
 import { compose } from "redux";
 import Preloader from "../general/Preloader/Preloader";
 import { authUs } from "../../hot/authUs";
-import { getCurrentStatus, getAuthenticationId, getSuperCurrentProfile, getIsMyPages, getSuperMyProfile } from "../../redux/selectors";
+import Error from "../Error/Error";
+import { getCurrentStatus, getAuthenticationId, getSuperCurrentProfile, getIsMyPages, getSuperMyProfile, getError } from "../../redux/selectors";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
@@ -57,6 +58,7 @@ const mapStateToProp = state => ({
     authenticationId: getAuthenticationId(state),
     isMyPages: getIsMyPages(state),
     myProfile: getSuperMyProfile(state),
+    error: getError(state),
 });
 
 export default compose(

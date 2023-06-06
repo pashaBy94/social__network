@@ -16,6 +16,7 @@ import ProfileContainer from './components/Profile/ProfileContainer';
 import Preloader from './components/general/Preloader/Preloader';
 import FriendsContainer from './components/Friends/FriendsContainer';
 import SettingsContainer from './components/Settings/Settings';
+import { getError } from './redux/selectors';
 
 const Settings = React.lazy(() => import('./components/Settings/Settings'));
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'))
@@ -51,6 +52,7 @@ class App extends React.Component {
   }
   render() {
     if (!this.props.initiallized) return <Preloader />
+    if(this.props.error) return <Error error={this.props.error}/>
     return (<>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <HeaderContainer />
@@ -82,7 +84,7 @@ class App extends React.Component {
 
 }
 
-const mapStateToProp = state => ({ initiallized: state.app.initiallized });
+const mapStateToProp = state => ({ initiallized: state.app.initiallized, error: getError(state) });
 
 const AppContainer = compose(
   connect(mapStateToProp, { authUserThank, setInitiallizedThank })
@@ -91,7 +93,7 @@ const AppContainer = compose(
 export default function AppFull() {
   return (
     <Provider store={store}>
-      <ErrorBoundary>
+      <ErrorBoundary store={store}>
         <AppContainer />
       </ErrorBoundary>
     </Provider>

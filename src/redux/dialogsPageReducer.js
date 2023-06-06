@@ -61,4 +61,3 @@ export function dialogsPageReducer(state = initialState, action){
             }
             return newState
 }
-console.log((new Date()).getHours());
