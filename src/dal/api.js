@@ -1,7 +1,4 @@
 import axios from 'axios';
-// import axios from './lib/axios.js'
-import { Navigate } from 'react-router-dom';
-import { setError } from '../redux/appReducer';
 
 class APIUS {
     constructor() {

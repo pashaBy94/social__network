@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import { connect } from "react-redux";
 import { authUserThank, logoutThank } from "../../redux/thankCreator";
-import { setAuthUser } from "../../redux/authUserReducer";
+import { setAuthUser } from "../../redux/authUserReducer.ts";
 import { getAuthenticationUser, getCurrentStatus, getIsAuth, getSuperMyProfile } from "../../redux/selectors";
 import { withRouter } from "../../utils/helpers";
 

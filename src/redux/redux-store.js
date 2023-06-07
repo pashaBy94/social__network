@@ -2,8 +2,8 @@ import { applyMiddleware, combineReducers, legacy_createStore as createStore} fr
 import { dialogsPageReducer } from "./dialogsPageReducer";
 import { profilPageReducer } from "./profilePageReducer";
 import { usersPageReducer } from './usersPageReducer';
-import { authUserReducer } from './authUserReducer';
-import { appReducer } from './appReducer';
+import { authUserReducer } from './authUserReducer.ts';
+import { appReducer } from './appReducer.ts';
 import { musicReducer } from './musicReducer';
 import thunkMiddleware from 'redux-thunk';
 

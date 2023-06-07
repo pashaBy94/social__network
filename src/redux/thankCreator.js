@@ -1,6 +1,5 @@
-import { setError, setInitiallized } from "./appReducer";
-import { Navigate } from "react-router-dom";
-import { getCaptchaFromStore, setAuthUser, setProfile } from "./authUserReducer";
+import { setError, setInitiallized } from "./appReducer.ts";
+import { getCaptchaFromStore, setAuthUser, setProfile } from "./authUserReducer.ts";
 import { savePhoto, setCurrentProfile, setCurrentStatus, updateAboutMyInfo } from "./profilePageReducer";
 import { userAPI } from "../dal/api";
 import { toggleIsLoader, setUser, setTotalCountPage, follow, unfollow, toggleDisabledFollow, setLengthCountPage } from "./usersPageReducer";
