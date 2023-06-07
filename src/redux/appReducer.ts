@@ -27,7 +27,7 @@ const initialState: initialStateType = {
     error: null,
 };
 
-export function appReducer(state = initialState, action: object): initialStateType {
+export function appReducer(state = initialState, action:any): initialStateType {
     let newState = { ...state };
     switch (action.type) {
         case SET_INITIALLIZED: {
