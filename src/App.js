@@ -19,8 +19,8 @@ import SettingsContainer from './components/Settings/Settings';
 import { getError } from './redux/selectors';
 
 const Settings = React.lazy(() => import('./components/Settings/Settings'));
-const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'))
-const Musics = React.lazy(() => import('./components/Musics/Musics'));
+const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
+const MusicsContainer = React.lazy(()=> import('./components/Musics/MusicsContainer'));
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const LoginContainer = React.lazy(() => import('./components/Login/LoginContainer'));
 
@@ -66,7 +66,7 @@ class App extends React.Component {
                   <Route path='/dialogs' element={<DialogsContainer />} />
                   <Route path='/users' element={<UsersContainer />} />
                   <Route path='/news' element={<News />} />
-                  <Route path='/musics' element={<Musics />} />
+                  <Route path='/musics' element={<MusicsContainer />} />
                   <Route path='/login' element={<LoginContainer />} />
                   <Route path='/settings' element={<SettingsContainer />} />
                   <Route path='/' element={<ProfileContainer />} />
