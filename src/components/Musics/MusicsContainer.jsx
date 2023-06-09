@@ -4,6 +4,7 @@ import Musics from "./Musics";
 import { compose } from "redux";
 import { getListMusics } from "../../redux/selectors";
 import Preloader from "./../general/Preloader/Preloader";
+import { getSuperCurrentProfile } from "../../redux/selectors";
 
 class MusicsContainer extends React.Component {
     componentDidMount() {
@@ -13,7 +14,6 @@ class MusicsContainer extends React.Component {
 
     }
     render() {
-        console.log(this.props.listMusics);
         if (!this.props.listMusics) return <Preloader />
         return (<Musics listMusics={this.props.listMusics} />)
     }
@@ -21,6 +21,7 @@ class MusicsContainer extends React.Component {
 
 const mapStateToProp = state => ({
     listMusics: getListMusics(state),
+    listTest: getSuperCurrentProfile(state),
 });
 
 export default compose(

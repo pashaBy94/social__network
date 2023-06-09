@@ -12,11 +12,6 @@ export default function AboutForm({ profile, setModEdit, updateInfoProfileThunk,
     function onClick() {
         setNoFail(false);
     }
-    function cnForm(val, form){
-        return cn({
-            'error_list': true
-        })
-    }
     return (
         <div className={st.about__save}>
             <Formik

@@ -13,10 +13,8 @@ export default function UserProfile({ profile, status, setCurrentStatusThunk, sa
     <section className={st.about}>
       <div className={st.about__photo}>
       <img 
-      src={isMyPages?myProfile.photos.large:profile.photos.large || 'noava.png'} 
+      src={(isMyPages?myProfile.photos.large:profile.photos.large) || "noava.png"} 
       alt="" 
-      height='250px' 
-      width='250px'
       className={st.user__imag}/>
       {isMyPages 
       && (<form action=""><label className={st.user__photo__btn}>Download your photo<input type="file" id="download__photo" className={st.photo__download} onChange={getPhoto}/>
@@ -26,7 +24,7 @@ export default function UserProfile({ profile, status, setCurrentStatusThunk, sa
       </div>
       <div className={st.about__text}>
         <h2 className={st.about__fullname}>{profile.fullName}</h2>
-        <ProfileStatus status={status} setCurrentStatusThunk={setCurrentStatusThunk} />
+        <ProfileStatus status={status} setCurrentStatusThunk={setCurrentStatusThunk} isMyPages={isMyPages}/>
         <hr className={st.about__hr}/>
         <AboutMy profile={{ ...profile }} isMyPages={isMyPages} updateInfoProfileThunk={updateInfoProfileThunk} authenticationId={authenticationId} />
       </div>

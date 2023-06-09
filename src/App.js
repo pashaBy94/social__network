@@ -18,9 +18,8 @@ import FriendsContainer from './components/Friends/FriendsContainer';
 import SettingsContainer from './components/Settings/Settings';
 import { getError } from './redux/selectors';
 
-const Settings = React.lazy(() => import('./components/Settings/Settings'));
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
-const MusicsContainer = React.lazy(()=> import('./components/Musics/MusicsContainer'));
+const MusicsContainer = React.lazy(() => import('./components/Musics/MusicsContainer'));
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const LoginContainer = React.lazy(() => import('./components/Login/LoginContainer'));
 
@@ -37,10 +36,10 @@ class ErrorBoundary extends React.Component {
   }
   render() {
     if (this.state.errorInfo) {
-      return <Error state={this.state}/>
+      return <Error state={this.state} />
     }
     return this.props.children;
-  }  
+  }
 }
 
 class App extends React.Component {
@@ -52,7 +51,7 @@ class App extends React.Component {
   }
   render() {
     if (!this.props.initiallized) return <Preloader />
-    if(this.props.error) return <Error error={this.props.error}/>
+    if (this.props.error) return <Error error={this.props.error} />
     return (<>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <HeaderContainer />

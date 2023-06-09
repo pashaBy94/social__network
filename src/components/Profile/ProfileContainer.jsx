@@ -7,7 +7,6 @@ import { withRouter } from "../../utils/helpers";
 import { compose } from "redux";
 import Preloader from "../general/Preloader/Preloader";
 import { authUs } from "../../hot/authUs";
-import Error from "../Error/Error";
 import { getCurrentStatus, getAuthenticationId, getSuperCurrentProfile, getIsMyPages, getSuperMyProfile, getError } from "../../redux/selectors";
 
 class ProfileContainer extends React.Component {

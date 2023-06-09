@@ -134,12 +134,10 @@ export const savePhotoThunk = (photo) => {
 }
 export const updateInfoProfileThunk = (info, submitProps, setModEdit) => {
     return (dispatch) => {
-        console.log(info, setModEdit);
         userAPI.updateInfoProfile(info).then(res => {
-            console.log(res);
             if (res.data.resultCode === 0) {
                 dispatch(updateAboutMyInfo(info));
-                setModEdit(false);
+                setModEdit(true);
             } else {
                 submitProps({ errors: res.data.messages[0] })
             }

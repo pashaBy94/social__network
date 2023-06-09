@@ -31,9 +31,9 @@ export default function ProfileStatus(props){
                         className={st.profile__input}
                         value={status} />
                 </div>
-                : <div className={st.profile__status} onClick={openEditor.bind(this)}>
+                : <div className={st.profile__status} onClick={props.isMyPages?openEditor.bind(this):null}>
                     <p>Status: {props.status}</p>
-                    <div className={st.profile__rename}>click to rename</div>
+                    <div className={props.isMyPages?st.profile__rename:st.profile__noRename}>click to rename</div>
                 </div>}
         </>
     )
